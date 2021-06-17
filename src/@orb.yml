@@ -1,7 +1,7 @@
 version: 2.1
 
 description: >
-  Sample orb description
+  This is a very basic which install Wix's Velo CLI.
 # What will your orb allow users to accomplish?
 # Descriptions should be short, simple, and informative.
 

@@ -40,7 +40,6 @@ workflows:
   test-pack:
     unless: << pipeline.parameters.run-integration-tests >>
     jobs:
-      - orb-tools/lint # Lint Yaml files
       - orb-tools/pack # Pack orb source
       - shellcheck/check:
           dir: ./src/scripts
@@ -53,7 +52,6 @@ workflows:
           orb-name: aaronfox1/velo-cli-for-wix
           context: orb-publishing # A restricted context containing your private publishing credentials. Will only execute if approved by an authorized user.
           requires:
-            - orb-tools/lint
             - orb-tools/pack
             - bats/run
             - shellcheck/check

@@ -1,0 +1,18 @@
+description: >
+  This command installs the latest version of Node.js.
+  If node is already installed this command will update node to the latest version.
+
+parameters:
+  version:
+    type: string
+    default: latest
+    description: >
+      Pick a version of NPM to install:
+      https://nodejs.org/en/download/releases
+
+steps:
+  - run:
+      name: Install NPM
+      environment:
+        NODE_PARAM_NPM_VERSION: <<parameters.version>>
+      command: <<include(scripts/install-npm.sh)>>

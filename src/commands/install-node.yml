@@ -16,6 +16,3 @@ steps:
       environment:
         NODE_PARAM_NPM_VERSION: <<parameters.version>>
       command: <<include(scripts/install-npm.sh)>>
-      
-
-      

@@ -4,4 +4,4 @@ steps:
 
   - run:
       name: Install Velo CLI
-      command: npx create-corvid-app ~/home/test http://www.carnmoregaa.net
+      command: npx create-corvid-app http://www.carnmoregaa.net

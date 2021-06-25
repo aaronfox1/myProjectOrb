@@ -6,5 +6,6 @@ rules:
         allow-non-breakable-inline-mappings: true
 
 ignore: |
-  ./src/commands/install-velo-cli.yml
-  ./src/examples/example.yml
+  /src/commands/install-velo-cli.yml
+  /src/examples/example.yml
+  

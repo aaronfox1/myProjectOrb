@@ -1,7 +1,10 @@
 description: >
   This command installs the Velo CLI and creates a directory for your website.
-
 steps:
   - run:
+      name: npm audit
+      command: npm audit
+
+  - run:
       name: Install Velo CLI
-      command: npx create-corvid-app ~/home/circleci/test http://carnmoregaa.net
+      command: npx create-corvid-app ~/home/circleci/test http://www.carnmoregaa.net

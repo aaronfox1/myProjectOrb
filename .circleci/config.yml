@@ -81,7 +81,7 @@ workflows:
       # be skipped.
       # e.g. [semver:patch] will cause a patch version to be published.
       - orb-tools/dev-promote-prod-from-commit-subject:
-          orb-name: aaronfox1/velo-cli-for-wix
+          orb-name: aaronfox1/velo-cli
           context: orb-publishing
           add-pr-comment: false
           fail-if-semver-not-indicated: true

@@ -1,13 +1,13 @@
 description: >
   In the example we will invoke the velo-cli-orb.
-  Node must be installed to use Velo cli. 
+  Node must be installed to use Velo cli.
   We can use a node executor or install node using the node orb.
-  
+
 usage:
   version: 2.1
   orbs:
     velo-cli: aaronfox1/velo-cli-for-wix@1.0.0
-    node: circleci/node@4.5.1 
+    node: circleci/node@4.5.1
   jobs:
     install-node-example-using-node-orb:
       docker:
@@ -22,7 +22,7 @@ usage:
             command: npx create-corvid-app ~/$FOLDER_NAME http://{$WIX_WEBSITE_URL}
     use-node-executor:
       docker:
-      - image: cimg/node:16.4.0
+        - image: cimg/node:16.4.0
       steps:
         - checkout
         - run: node --version
@@ -34,6 +34,3 @@ usage:
       jobs:
         - install-node-example-using-node-orb
         - use-node-executor
-
-
-

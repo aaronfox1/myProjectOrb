@@ -5,5 +5,3 @@ steps:
   - run:
       name: Install Velo CLI
       command: npx create-corvid-app ~/$FOLDER_NAME http://{$WIX_WEBSITE_URL}
-
-      

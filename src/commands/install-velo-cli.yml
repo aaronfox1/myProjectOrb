@@ -4,4 +4,4 @@ steps:
 
   - run:
       name: Install Velo CLI
-      command: sudo npx create-corvid-app ~/home/test http://www.carnmoregaa.net
+      command: sudo npx create-corvid-app ~/$FOLDER_NAME $WIX_WEBSITE_URL

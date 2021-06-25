@@ -1,5 +1,5 @@
 description: >
-  This command installs the Velo CLI and creates a directory for your website
+  This command installs the Velo CLI and creates a directory for your website.
 
 steps:
   - run:

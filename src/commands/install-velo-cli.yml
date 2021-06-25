@@ -3,4 +3,9 @@ description: >
 steps:
  - run:
       name: Install Velo CLI
+<<<<<<< HEAD
       command: npx create-corvid-app ~/$FOLDER_NAME $WIX_WEBSITE_URL
+=======
+      command: npx create-corvid-app ~/$FOLDER_NAME http://{$WIX_WEBSITE_URL}
+
+>>>>>>> c76abdaabe711f72563362fa1c731a61a5f4eba2

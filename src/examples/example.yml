@@ -1,13 +1,39 @@
 description: >
-  Sample example description.
-# Provide a use-case based example for using this orb.
-# Everything in the `usage` section will be displayed in the orb registry.
-# Comments are not retained.
+  In the example we will invoke the velo-cli-orb.
+  Node must be installed to use Velo cli. 
+  We can use a node executor or install node using the node orb.
+  
 usage:
   version: 2.1
   orbs:
-    <orb-name>: <namespace>/<orb-name>@1.2.3
+    velo-cli: aaronfox1/velo-cli-for-wix@1.0.0
+    node: circleci/node@4.5.1 
+  jobs:
+    install-node-example-using-node-orb:
+      docker:
+        - image: 'cimg/base:stable'
+      steps:
+        - checkout
+        - node/install:
+            install-yarn: true
+        - run: node --version
+        - run:
+            name: Install Velo CLI
+            command: npx create-corvid-app ~/$FOLDER_NAME http://{$WIX_WEBSITE_URL}
+    use-node-executor:
+      docker:
+      - image: cimg/node:16.4.0
+      steps:
+        - checkout
+        - run: node --version
+        - run:
+            name: Install Velo CLI
+            command: npx create-corvid-app ~/$FOLDER_NAME http://{$WIX_WEBSITE_URL}
   workflows:
-    use-my-orb:
+    test-workflow:
       jobs:
-        - <orb-name>/<job-name>
+        - install-node-example-using-node-orb
+        - use-node-executor
+
+
+

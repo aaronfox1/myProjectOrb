@@ -8,18 +8,15 @@ View the included _[greet.yml](./greet.yml)_ example.
 
 ```yaml
 description: >
-  Replace this text with a description for this command.
-  # What will this command do?
-  # Descriptions should be short, simple, and clear.
-parameters:
-  greeting:
-    type: string
-    default: "Hello"
-    description: "Select a proper greeting"
+  This command runs a step which installs velo cli for wix.
+  The command requires node v12.0 or later to run.
+  Two environmental variables are required.
+  FOLDER_NAME: [Where on the directory should the source code for your wix site be stored]
+  WIX_WEBSITE_URL:[The full address of the wix site. e.g. http://..]
 steps:
   - run:
-      name: Hello World
-      command: echo << parameters.greeting >> world
+      name: Install Velo CLI
+      command: npx create-corvid-app ~/$FOLDER_NAME http://{$WIX_WEBSITE_URL}
 ```
 
 ## See:

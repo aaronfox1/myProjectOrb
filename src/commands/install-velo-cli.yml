@@ -1,7 +1,6 @@
 description: >
   This command installs the Velo CLI and creates a directory for your website.
 steps:
-
-  - run:
+ - run:
       name: Install Velo CLI
-      command: sudo npx create-corvid-app ~/$FOLDER_NAME $WIX_WEBSITE_URL
+      command: npx create-corvid-app ~/$FOLDER_NAME $WIX_WEBSITE_URL

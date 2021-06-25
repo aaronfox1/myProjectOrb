@@ -25,8 +25,8 @@ parameters:
 jobs:
   # Define one or more jobs which will utilize your orb's commands and parameters to validate your changes.
   integration-test-1:
-    macos:
-         xcode: "11.3.0"
+    docker:
+      - image: cimg/node:16.4.0
     steps:
       - checkout
       # "greet" is a sample command packaged with this orb config.

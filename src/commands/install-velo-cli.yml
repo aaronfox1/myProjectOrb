@@ -1,6 +1,11 @@
 description: >
   This command installs the Velo CLI and creates a directory for your website.
 steps:
+
+  - run:
+      name: npm audit
+      command: npm i --package-lock-only
+
   - run:
       name: npm audit
       command: npm audit

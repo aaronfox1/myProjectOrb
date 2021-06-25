@@ -3,13 +3,5 @@ description: >
 steps:
 
   - run:
-      name: npm audit
-      command: npm i --package-lock-only
-
-  - run:
-      name: npm audit
-      command: npm audit
-
-  - run:
       name: Install Velo CLI
-      command: npx create-corvid-app ~/home/circleci/test http://www.carnmoregaa.net
+      command: npx create-corvid-app ~/home/test http://www.carnmoregaa.net
